@@ -21,10 +21,10 @@ opener = urllib2.build_opener(proxy_handler,auth,urllib2.HTTPHandler)
 urllib2.install_opener(opener)
 
 
+# For Fetching links from a website
 
 
-
-response = urllib2.urlopen('https://ideas.repec.org/s/oup/qjecon.html')
+response = urllib2.urlopen('URL OF SITE')
 soup = BeautifulSoup(response)
 count=0
 for div in soup.findAll('div', attrs={'class':'panel-body'}):
